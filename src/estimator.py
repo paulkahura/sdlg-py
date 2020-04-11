@@ -1,10 +1,10 @@
-def estimator(data):
+def estimator(data1):
     avgDailyIncomeInUSD = data["region"]["avgDailyIncomeInUSD"]
     avgDailyIncomePopulation = data["region"]['avgDailyIncomePopulation']
     periodType = data["periodType"]
     timeToElapse = data["timeToElapse"]
     reportedCases = data["reportedCases"]
-    totalHospitalBeds = data["totalHospitalBeds"]
+    totalHospitalBeds = dataga["totalHospitalBeds"]
     #for impact we represent it by I
     #for sever inpact we represent it by SI
 
@@ -75,7 +75,7 @@ def estimator(data):
         dollarsInFlightI = infectionsByRequestedTimeI * avgDailyIncomePopulation * avgDailyIncomeInUSD                 
         dollarsInFlightSI = infectionsByRequestedTimeSI * avgDailyIncomePopulation * avgDailyIncomeInUSD 
     
-    impact = {"impact" : {
+    impact1 = {"impact" : {
                     "currentlyInfected": int(currentlyInfectedI),
                     "infectionsByRequestedTime": int(infectionsByRequestedTimeI),
                     "severeCasesByRequestedTime": int(severeCasesByRequestedTimeI),
@@ -84,7 +84,7 @@ def estimator(data):
                     "casesForVentilatorsByRequestedTime": int(cFVBRT_I),
                     "dollarsInFlight": int(dollarsInFlightI),
     }}
-    severeImpact = {"impact" : {
+    severeImpact1 = {"impact" : {
                     "currentlyInfected": int(currentlyInfectedSI),
                     "infectionsByRequestedTime": int(infectionsByRequestedTimeSI),
                     "severeCasesByRequestedTime": int(severeCasesByRequestedTimeSI),
@@ -96,4 +96,4 @@ def estimator(data):
 
     #for severe impact
 
-    return data,impact,severeImpact
+    return data1,impact1,severeImpact1
