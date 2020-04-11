@@ -58,7 +58,7 @@ def estimator(data):
         timeToElapse = 30 * timeToElapse
         infectionsByRequestedTimeI=currentlyInfectedI * (2 ** (timeToElapse // 3))
         severeCasesByRequestedTimeI = 0.15 * infectionsByRequestedTimeI
-        infectionsByRequestedTimeSI=currentlyInfectedSI * (2 ** (timeToElapse // 3))
+        infectionsByRequestedTimeSI = currentlyInfectedSI * (2 ** (timeToElapse // 3))
         severeCasesByRequestedTimeSI = 0.15 * infectionsByRequestedTimeSI
         
         avBeds = .35 * totalHospitalBeds
