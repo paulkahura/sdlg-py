@@ -1,10 +1,10 @@
 def estimator(data):
-    avgDailyIncomeInUSD = data["data"]["region"]["avgDailyIncomeInUSD"]
-    avgDailyIncomePopulation = data["data"]["region"]['avgDailyIncomePopulation']
-    periodType = data["data"]["periodType"]
-    timeToElapse = data["data"]["timeToElapse"]
-    reportedCases = data["data"]["reportedCases"]
-    totalHospitalBeds = data["data"]["totalHospitalBeds"]
+    avgDailyIncomeInUSD = data["region"]["avgDailyIncomeInUSD"]
+    avgDailyIncomePopulation = data["region"]['avgDailyIncomePopulation']
+    periodType = data["periodType"]
+    timeToElapse = data["timeToElapse"]
+    reportedCases = data["reportedCases"]
+    totalHospitalBeds = data["totalHospitalBeds"]
     #for impact we represent it by I
     #for sever inpact we represent it by SI
 
