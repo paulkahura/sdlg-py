@@ -1,10 +1,10 @@
-def estimator(data1):
-    avgDailyIncomeInUSD = data1["region"]["avgDailyIncomeInUSD"]
-    avgDailyIncomePopulation = data1["region"]['avgDailyIncomePopulation']
-    periodType = data1["periodType"]
-    timeToElapse = data1["timeToElapse"]
-    reportedCases = data1["reportedCases"]
-    totalHospitalBeds = data1["totalHospitalBeds"]
+def estimator(data):
+    avgDailyIncomeInUSD = data["region"]["avgDailyIncomeInUSD"]
+    avgDailyIncomePopulation = data["region"]['avgDailyIncomePopulation']
+    periodType = data["periodType"]
+    timeToElapse = data["timeToElapse"]
+    reportedCases = data["reportedCases"]
+    totalHospitalBeds = data["totalHospitalBeds"]
     #for impact we represent it by I
     #for sever inpact we represent it by SI
 
@@ -75,7 +75,7 @@ def estimator(data1):
         dollarsInFlightI = infectionsByRequestedTimeI * avgDailyIncomePopulation * avgDailyIncomeInUSD                 
         dollarsInFlightSI = infectionsByRequestedTimeSI * avgDailyIncomePopulation * avgDailyIncomeInUSD 
     
-    impact1 = {"impact" : {
+    output = {"impact" : {
                     "currentlyInfected": int(currentlyInfectedI),
                     "infectionsByRequestedTime": int(infectionsByRequestedTimeI),
                     "severeCasesByRequestedTime": int(severeCasesByRequestedTimeI),
@@ -83,8 +83,8 @@ def estimator(data1):
                     "casesForIcuByRequestedTime": int(cFICURT_I),
                     "casesForVentilatorsByRequestedTime": int(cFVBRT_I),
                     "dollarsInFlight": int(dollarsInFlightI),
-    }}
-    severeImpact1 = {"severeImpact" : {
+                        },
+             "severeImpact" : {
                     "currentlyInfected": int(currentlyInfectedSI),
                     "infectionsByRequestedTime": int(infectionsByRequestedTimeSI),
                     "severeCasesByRequestedTime": int(severeCasesByRequestedTimeSI),
@@ -96,4 +96,4 @@ def estimator(data1):
 
     #for severe impact
 
-    return data1,impact1,severeImpact1
+    return data, output
