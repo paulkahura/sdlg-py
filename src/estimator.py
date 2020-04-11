@@ -1,21 +1,21 @@
 def estimator(data):
-    avgDailyIncomeInUSD=data["data"]["region"]["avgDailyIncomeInUSD"]
+    avgDailyIncomeInUSD = data["data"]["region"]["avgDailyIncomeInUSD"]
     avgDailyIncomePopulation = data["data"]["region"]['avgDailyIncomePopulation']
-    periodType=data["data"]["periodType"]
-    timeToElapse=data["data"]["timeToElapse"]
-    reportedCases=data["data"]["reportedCases"]
-    totalHospitalBeds=data["data"]["totalHospitalBeds"]
+    periodType = data["data"]["periodType"]
+    timeToElapse = data["data"]["timeToElapse"]
+    reportedCases = data["data"]["reportedCases"]
+    totalHospitalBeds = data["data"]["totalHospitalBeds"]
     #for impact we represent it by I
     #for sever inpact we represent it by SI
 
-    currentlyInfectedI=reportedCases*10
-    currentlyInfectedSI=reportedCases*50
+    currentlyInfectedI = reportedCases * 10
+    currentlyInfectedSI = reportedCases * 50
 
     #add a for loop to check for time lapse format
     if periodType == "days":
-        infectionsByRequestedTimeI=currentlyInfectedI*(2**(timeToElapse // 3))
+        infectionsByRequestedTimeI = currentlyInfectedI*(2**(timeToElapse // 3))
         severeCasesByRequestedTimeI = 0.15 * infectionsByRequestedTimeI
-        infectionsByRequestedTimeSI=currentlyInfectedSI*(2**(timeToElapse // 3))
+        infectionsByRequestedTimeSI = currentlyInfectedSI*(2**(timeToElapse // 3))
         severeCasesByRequestedTimeSI = 0.15 * infectionsByRequestedTimeSI
         
         avBeds = .35 * totalHospitalBeds
@@ -35,9 +35,9 @@ def estimator(data):
         
     elif periodType == "weeks":
         timeToElapse = 7 * timeToElapse
-        infectionsByRequestedTimeI=currentlyInfectedI*(2**(timeToElapse // 3))
+        infectionsByRequestedTimeI = currentlyInfectedI * (2 ** (timeToElapse // 3))
         severeCasesByRequestedTimeI = 0.15 * infectionsByRequestedTimeI
-        infectionsByRequestedTimeSI=currentlyInfected*(2**(timeToElapse // 3))
+        infectionsByRequestedTimeSI = currentlyInfectedSI * (2 ** (timeToElapse // 3))
         severeCasesByRequestedTimeSI = 0.15 * infectionsByRequestedTimeSI
         
         avBeds = .35 * totalHospitalBeds
@@ -56,9 +56,9 @@ def estimator(data):
 
     elif periodType =="months":
         timeToElapse = 30 * timeToElapse
-        infectionsByRequestedTimeI=currentlyInfectedI*(2**(timeToElapse // 3))
+        infectionsByRequestedTimeI=currentlyInfectedI * (2 ** (timeToElapse // 3))
         severeCasesByRequestedTimeI = 0.15 * infectionsByRequestedTimeI
-        infectionsByRequestedTimeSI=currentlyInfected*(2**(timeToElapse // 3))
+        infectionsByRequestedTimeSI=currentlyInfectedSI * (2 ** (timeToElapse // 3))
         severeCasesByRequestedTimeSI = 0.15 * infectionsByRequestedTimeSI
         
         avBeds = .35 * totalHospitalBeds
