@@ -75,7 +75,10 @@ def estimator(data):
         dollarsInFlightI = infectionsByRequestedTimeI * avgDailyIncomePopulation * avgDailyIncomeInUSD                 
         dollarsInFlightSI = infectionsByRequestedTimeSI * avgDailyIncomePopulation * avgDailyIncomeInUSD 
     
-    output = {"impact" : {
+    output = {
+        "data":data,
+        
+        "impact" : {
                     "currentlyInfected": int(currentlyInfectedI),
                     "infectionsByRequestedTime": int(infectionsByRequestedTimeI),
                     "severeCasesByRequestedTime": int(severeCasesByRequestedTimeI),
@@ -96,4 +99,4 @@ def estimator(data):
 
     #for severe impact
 
-    return data, output
+    return output
