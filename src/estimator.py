@@ -83,7 +83,7 @@ def estimator(data):
                     "infectionsByRequestedTime": int(infectionsByRequestedTimeI),
                     "severeCasesByRequestedTime": int(severeCasesByRequestedTimeI),
                     "hospitalBedsByRequestedTime": int(hospitalBedsByRequestedTimeI),
-                    "casesForIcuByRequestedTime": int(cFICURT_I),
+                    "casesForICUByRequestedTime": int(cFICURT_I),
                     "casesForVentilatorsByRequestedTime": int(cFVBRT_I),
                     "dollarsInFlight": int(dollarsInFlightI),
                         },
@@ -92,7 +92,7 @@ def estimator(data):
                     "infectionsByRequestedTime": int(infectionsByRequestedTimeSI),
                     "severeCasesByRequestedTime": int(severeCasesByRequestedTimeSI),
                     "hospitalBedsByRequestedTime": int(hospitalBedsByRequestedTimeSI),
-                    "casesForIcuByRequestedTime": int(cFICURT_SI),
+                    "casesForICUByRequestedTime": int(cFICURT_SI),
                     "casesForVentilatorsByRequestedTime": int(cFVBRT_SI),
                     "dollarsInFlight": int(dollarsInFlightSI),
     }}
