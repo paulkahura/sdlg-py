@@ -84,7 +84,7 @@ def estimator(data1):
                     "casesForVentilatorsByRequestedTime": int(cFVBRT_I),
                     "dollarsInFlight": int(dollarsInFlightI),
     }}
-    severeImpact1 = {"impact" : {
+    severeImpact1 = {"severeImpact" : {
                     "currentlyInfected": int(currentlyInfectedSI),
                     "infectionsByRequestedTime": int(infectionsByRequestedTimeSI),
                     "severeCasesByRequestedTime": int(severeCasesByRequestedTimeSI),
