@@ -29,8 +29,8 @@ def estimator(data):
         cFVBRT_I = .02 * infectionsByRequestedTimeI
         cFVBRT_SI = .02 * infectionsByRequestedTimeSI
 
-        dollarsInFlightI = infectionsByRequestedTimeI * avgDailyIncomePopulation * avgDailyIncomeInUSD                 
-        dollarsInFlightSI = infectionsByRequestedTimeSI * avgDailyIncomePopulation * avgDailyIncomeInUSD                 
+        dollarsInFlightI = (infectionsByRequestedTimeI * avgDailyIncomePopulation * avgDailyIncomeInUSD)/timeToElapse               
+        dollarsInFlightSI = infectionsByRequestedTimeSI * avgDailyIncomePopulation * avgDailyIncomeInUSD/timeToElapse                 
 
         
     elif periodType == "weeks":
@@ -51,8 +51,8 @@ def estimator(data):
         cFVBRT_I = .02 * infectionsByRequestedTimeI
         cFVBRT_SI = .02 * infectionsByRequestedTimeSI
 
-        dollarsInFlightI = infectionsByRequestedTimeI * avgDailyIncomePopulation * avgDailyIncomeInUSD                 
-        dollarsInFlightSI = infectionsByRequestedTimeSI * avgDailyIncomePopulation * avgDailyIncomeInUSD 
+        dollarsInFlightI = (infectionsByRequestedTimeI * avgDailyIncomePopulation * avgDailyIncomeInUSD)/timeToElapse                 
+        dollarsInFlightSI = (infectionsByRequestedTimeSI * avgDailyIncomePopulation * avgDailyIncomeInUSD)/timeToElapse 
 
     elif periodType =="months":
         timeToElapse = 30 * timeToElapse
@@ -72,8 +72,8 @@ def estimator(data):
         cFVBRT_I = .02 * infectionsByRequestedTimeI
         cFVBRT_SI = .02 * infectionsByRequestedTimeSI
 
-        dollarsInFlightI = infectionsByRequestedTimeI * avgDailyIncomePopulation * avgDailyIncomeInUSD                 
-        dollarsInFlightSI = infectionsByRequestedTimeSI * avgDailyIncomePopulation * avgDailyIncomeInUSD 
+        dollarsInFlightI = (infectionsByRequestedTimeI * avgDailyIncomePopulation * avgDailyIncomeInUSD) /timeToElapse                
+        dollarsInFlightSI = (infectionsByRequestedTimeSI * avgDailyIncomePopulation * avgDailyIncomeInUSD)/timeToElapse
     
     output = {
         "data":data,
