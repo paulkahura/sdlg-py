@@ -20,12 +20,30 @@
       src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
       font-display: swap;
     }
+    .container{
+      margin-top: 100px;
+       border-radius:20px;
+       border:2px grey solid
+    }
+    label{
+      color:black!important;
+    }
+    #this{
+      color:black
+    }
+    select{
+      display: block;
+      margin-left:150px;
+    }
+    .btn{
+      margin-left:40%;background-color:black
+    }
   </style>
   </head>
   <title>COVID estimator
   </title>
   <body>
-      <div class="container whitesmoke" style="margin-top: 100px; border-radius:20px;border:2px grey solid">
+      <div class="container whitesmoke" >
             <div class="row">
                 <h2 class="center">Covid estimator </h2>
                 <h6 class="center">please fill in the data below:
@@ -35,29 +53,29 @@
                     <div class="input-field col s6">
                     <!-- <i class="material-icons prefix">group_circle</i> -->
                     <input id="icon_prefix data-population" type="text" class="validate">
-                    <label for="icon_prefix data-population" style="color:black">Population</label>
+                    <label for="icon_prefix data-population" >Population</label>
                     </div>
                     <div class="input-field col s6">
                     <!-- <i class="material-icons prefix">date_range</i> -->
                     <input id="icon_telephone data-time-to-elapse"  class="validate">
-                    <label for="icon_telephone data-time-to-elapse" style="color:black">Time to elapse</label>
+                    <label for="icon_telephone data-time-to-elapse">Time to elapse</label>
                     </div>
 
                     <div class="input-field col s6">
                     <!-- <i class="material-icons prefix">face</i> -->
                     <input id="icon_prefix data-reported-cases" type="text" class="validate" >
-                    <label for="icon_prefix data-reported-cases" style="color:black">Reported cases</label>
+                    <label for="icon_prefix data-reported-cases">Reported cases</label>
                     </div>
                     <div class="input-field col s6">
                     <!-- <i class="material-icons prefix">airline_seat_flat</i> -->
                     <input id="icon_telephone data-total-hospital-beds"  class="validate">
-                    <label for="icon_telephone data-total-hospital-beds" style="color:black">Total hospital beds</label>
+                    <label for="icon_telephone data-total-hospital-beds" >Total hospital beds</label>
                     </div>
 
                     
                     <div class="input-field col s6" >
-                        <label for="data-period-type" style="margin-left: 20px;color:black">PeriodType</label>
-                            <select style="display: block; margin-left:150px;" id="data-period-type">
+                        <label id="this" for="data-period-type">PeriodType</label>
+                            <select  id="data-period-type">
                               <option value="" disabled selected>PeriodType</option>
                               <option value="1">days</option>
                               <option value="2">weeks</option>
@@ -68,7 +86,7 @@
                             
                             <div class="input-field col s12">
                                     <a class="waves-effect waves-light btn data-go-
-                                    estimate " style="margin-left:40%;background-color:black">Submit</a>
+                                    estimate ">Submit</a>
                             </div>
                     </div>
                     
