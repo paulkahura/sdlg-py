@@ -85,7 +85,7 @@ def estimator(data):
                     "hospitalBedsByRequestedTime": int(hospitalBedsByRequestedTimeI),
                     "casesForICUByRequestedTime": int(cFICURT_I),
                     "casesForVentilatorsByRequestedTime": int(cFVBRT_I),
-                    "dollarsInFlight": dollarsInFlightI,
+                    "dollarsInFlight": int(dollarsInFlightI),
                         },
              "severeImpact" : {
                     "currentlyInfected": int(currentlyInfectedSI),
@@ -94,7 +94,7 @@ def estimator(data):
                     "hospitalBedsByRequestedTime": int(hospitalBedsByRequestedTimeSI),
                     "casesForICUByRequestedTime": int(cFICURT_SI),
                     "casesForVentilatorsByRequestedTime": int(cFVBRT_SI),
-                    "dollarsInFlight": dollarsInFlightSI,
+                    "dollarsInFlight": int(dollarsInFlightSI),
     }}
 
     #for severe impact
