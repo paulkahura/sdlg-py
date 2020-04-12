@@ -6,7 +6,6 @@
     <!--Import materialize.css-->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
     <!--Let browser know website is optimized for mobile-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="UTF-8">
     <meta name="Description" content="this is a page for the estimation of covid impact." >
@@ -22,9 +21,47 @@
       font-display: swap;
     }
     .container{
-      margin-top: 100px;
        border-radius:20px;
-       border:2px grey solid
+       border:2px grey solid;
+       width: 800px;
+       margin:80px auto;
+       
+    }
+    h2{
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: lighter;
+    }
+    h6{
+      text-align: center;
+      font-size: 1em;
+      font-weight: lighter;
+    }
+    input{
+      float: right;
+    }
+    form{
+      width:600px;
+      margin: 0 auto;
+      display: grid;
+      padding: 10px;
+      
+    }
+    .input-field1{grid-area: one;
+      }
+    .input-field1>input{
+      float: right;
+    }
+    .input-field2{grid-area: two;}
+    .input-field3{grid-area: one;}
+    .input-field4{grid-area: two;}
+    .input-field5{grid-area: one;}
+    .input-field6{grid-area: two;}
+    .field{
+      width: 500px;
+      height: 40px;
+      overflow: hidden;
+      margin: 15px auto;
     }
     label{
       color:black!important;
@@ -34,10 +71,21 @@
     }
     select{
       display: block;
-      margin-left:150px;
+      position: relative;
+      bottom: 3px;
+      float: right;
+      margin-right: 100px;
     }
-    .btn{
-      margin-left:40%;background-color:black
+    .button{
+      background-color:black;
+      width:150px;
+      height: 40px;
+      border-radius: 15px;
+      color:whitesmoke;
+      text-align: center;
+      padding-top: 20px;
+      margin-left: 220px;
+
     }
   </style>
   </head>
@@ -51,30 +99,30 @@
                 </h6>
                 <form class="col s12">
                 <div class="column">
-                    <div class="input-field col s6">
+                    <div class="input-field1 field">
                     <!-- <i class="material-icons prefix">group_circle</i> -->
-                    <input id="icon_prefix data-population" type="text" class="validate">
                     <label for="icon_prefix data-population" >Population</label>
+                    <input id="icon_prefix data-population" type="text" class="validate">
                     </div>
-                    <div class="input-field col s6">
+                    <div class="input-field2 field">
                     <!-- <i class="material-icons prefix">date_range</i> -->
-                    <input id="icon_telephone data-time-to-elapse"  class="validate">
                     <label for="icon_telephone data-time-to-elapse">Time to elapse</label>
+                    <input id="icon_telephone data-time-to-elapse"  class="validate">
                     </div>
 
-                    <div class="input-field col s6">
+                    <div class="input-field3 field">
                     <!-- <i class="material-icons prefix">face</i> -->
-                    <input id="icon_prefix data-reported-cases" type="text" class="validate" >
                     <label for="icon_prefix data-reported-cases">Reported cases</label>
+                    <input id="icon_prefix data-reported-cases" type="text" class="validate" >
                     </div>
-                    <div class="input-field col s6">
+                    <div class="input-field4 field">
                     <!-- <i class="material-icons prefix">airline_seat_flat</i> -->
-                    <input id="icon_telephone data-total-hospital-beds"  class="validate">
                     <label for="icon_telephone data-total-hospital-beds" >Total hospital beds</label>
+                    <input id="icon_telephone data-total-hospital-beds"  class="validate">
                     </div>
 
                     
-                    <div class="input-field col s6" >
+                    <div class="input-field5 field" >
                         <label id="this" for="data-period-type">PeriodType</label>
                             <select  id="data-period-type">
                               <option value="" disabled selected>PeriodType</option>
@@ -85,7 +133,7 @@
                           </div>
                         
                             
-                            <div class="input-field col s12">
+                            <div class="input-field6 button">
                                     <a class="waves-effect waves-light btn data-go-
                                     estimate ">Submit</a>
                             </div>
